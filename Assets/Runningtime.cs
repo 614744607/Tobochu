@@ -47,7 +47,7 @@ public class Runningtime : MonoBehaviour {
 		if (Input.GetKey (KeyCode.E)) {
 			Score.score = 270;
 		}	
-		if (Input.GetKey (KeyCode.X)) {
+		if (Input.GetKeyDown(KeyCode.X)) {
 			Score.score += 50;
 		}	
 
