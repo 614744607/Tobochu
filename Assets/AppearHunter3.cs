@@ -9,6 +9,7 @@ public class AppearHunter3 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Hunter = GameObject.Find ("Hnunter3"); // 探して保存する		
+
 		Hunter.SetActive(false);		
 	}
 

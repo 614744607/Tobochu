@@ -14,7 +14,11 @@ public class Runningtime : MonoBehaviour {
 	// Use this for initialization
 	public float runTime;
 	public float Shokincheck;
+	public float dushtime;
+	public int Itemused = 0;
+	private GameObject nearObj;         //最も近いオブジェクト
 	void Start () {
+
 	}
 	
 	// Update is called once per frame
@@ -27,8 +31,6 @@ public class Runningtime : MonoBehaviour {
 
 
 
-
-
 		Score.score = Time.deltaTime + Score.score;
 		float Shokincheck = Score.score * Score.ShokinPerSec;
 		timeUIText.text = "逃走時間 : " + Score.score.ToString ("F0") + "秒"; //表示して
@@ -38,6 +40,12 @@ public class Runningtime : MonoBehaviour {
 			SceneManager.LoadScene ("tososeikou");
 
 		}
+
+
+		if (Input.GetKeyDown (KeyCode.R) & Itemused == 0) { //Rが押された時
+			Score.score = Score.score + 10; //10秒だけ逃げ切る時間を減らせる
+			Itemused = Itemused + 1;
+		}	
 
 
 
