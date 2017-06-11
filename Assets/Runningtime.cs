@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Runningtime : MonoBehaviour {
-
+	public Camera camera;
 
 	public Text timeUIText;
 	public Text ShokinUIText;
@@ -20,7 +20,7 @@ public class Runningtime : MonoBehaviour {
 	void Start () {
 		UnityStandardAssets.Characters.FirstPerson.FirstPersonController.m_RunSpeed = 40f;
 		UnityStandardAssets.Characters.FirstPerson.FirstPersonController.m_WalkSpeed = 20f;
-
+	
 	}
 	
 	// Update is called once per frame
@@ -60,12 +60,12 @@ public class Runningtime : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.X)) {
 			Score.score += 50;
 		}	
-		if (Input.GetKeyDown(KeyCode.R)) {
+		if (Input.GetKeyDown(KeyCode.P)) {
 			UnityStandardAssets.Characters.FirstPerson.FirstPersonController.m_RunSpeed = UnityStandardAssets.Characters.FirstPerson.FirstPersonController.m_RunSpeed * 1.4f;
 			UnityStandardAssets.Characters.FirstPerson.FirstPersonController.m_WalkSpeed = UnityStandardAssets.Characters.FirstPerson.FirstPersonController.m_WalkSpeed * 1.4f;
-
-
 		}	
+
+
 
 
 			}
