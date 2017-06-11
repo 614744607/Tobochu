@@ -18,6 +18,8 @@ public class Runningtime : MonoBehaviour {
 	public int Itemused = 0;
 	private GameObject nearObj;         //最も近いオブジェクト
 	void Start () {
+		UnityStandardAssets.Characters.FirstPerson.FirstPersonController.m_RunSpeed = 40f;
+		UnityStandardAssets.Characters.FirstPerson.FirstPersonController.m_WalkSpeed = 20f;
 
 	}
 	
@@ -57,6 +59,12 @@ public class Runningtime : MonoBehaviour {
 		}	
 		if (Input.GetKeyDown(KeyCode.X)) {
 			Score.score += 50;
+		}	
+		if (Input.GetKeyDown(KeyCode.R)) {
+			UnityStandardAssets.Characters.FirstPerson.FirstPersonController.m_RunSpeed = UnityStandardAssets.Characters.FirstPerson.FirstPersonController.m_RunSpeed * 1.4f;
+			UnityStandardAssets.Characters.FirstPerson.FirstPersonController.m_WalkSpeed = UnityStandardAssets.Characters.FirstPerson.FirstPersonController.m_WalkSpeed * 1.4f;
+
+
 		}	
 
 
