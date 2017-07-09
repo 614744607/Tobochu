@@ -7,6 +7,7 @@ public class Score : MonoBehaviour {
 	public Text scoreUIText;
 	// 合計時間を表示するUIText
 	public Text ShokinText;
+	//public Text ItemText;
 	public Text highScoreUIText;
 	public Text ShokinPerSecUIText;
 	// 時間
