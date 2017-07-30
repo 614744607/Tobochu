@@ -20,12 +20,10 @@ public class AppearHunter1 : MonoBehaviour {
 		C = GameObject.Find("c");
 		B = GameObject.Find("e");
 		D = GameObject.Find("f");
-		E = GameObject.Find ("Jama/ManyTrees");
 		A.SetActive (false);
 		B.SetActive (false);
 		C.SetActive (false);
 		D.SetActive (false);
-		E.SetActive (false);
 
 
 	}
@@ -40,7 +38,6 @@ public class AppearHunter1 : MonoBehaviour {
 			B.SetActive (true);
 			C.SetActive (true);
 			D.SetActive (true);
-			E.SetActive (true);
 		}
 
 	}

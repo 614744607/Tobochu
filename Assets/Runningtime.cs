@@ -51,6 +51,7 @@ public class Runningtime : MonoBehaviour {
 
 		Score.score = Time.deltaTime + Score.score;
 		float Shokincheck = Score.score * Score.ShokinPerSec;
+
 		timeUIText.text = "逃走時間 : " + Score.score.ToString ("F0") + "秒"; //表示して
 		ShokinUIText.text = "賞金 : " + Shokincheck.ToString ("F0") + "円"; //表示して
 		itemText.text="ハンター消滅銃(L):" + Shot.limit.ToString("F0")+"個" ;
