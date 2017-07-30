@@ -14,7 +14,7 @@ public class itemgetting : MonoBehaviour {
 		
 	}
 
-	void OnCollisionEnter(Collider hit){
+	void OnCollisionEnter(Collision hit){
 		if (hit.gameObject.tag == "item") {
 			Debug.Log ("高麗人参");
 			Shot.limit = Shot.limit + 1;
