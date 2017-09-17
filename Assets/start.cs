@@ -13,10 +13,6 @@ public class start : MonoBehaviour {
 		if (Input.GetKey (KeyCode.S)) {
 			SceneManager.LoadScene("メイン");
 		}
-		if (Input.GetKey (KeyCode.T)) {
-			if (Score.Shokin >= 300000) {
-				SceneManager.LoadScene ("Stafe2");
-			}		
-		}
+
 	}
 }

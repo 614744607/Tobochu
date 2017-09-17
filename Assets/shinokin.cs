@@ -20,6 +20,6 @@ public class shinokin : MonoBehaviour {
 
 	public void Capture()
 	{
-		Application.CaptureScreenshot("しのきん.png");
+		ScreenCapture.CaptureScreenshot("しのきん.png");
 	}
 }

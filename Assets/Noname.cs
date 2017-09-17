@@ -12,7 +12,7 @@ public class Noname : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Application.CaptureScreenshot("のなめ.png");
+		ScreenCapture.CaptureScreenshot("のなめ.png");
 		SceneManager.LoadScene("start");
 	}
 }

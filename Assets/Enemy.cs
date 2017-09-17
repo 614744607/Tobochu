@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour {
 	void OnTriggerEnter(Collider target) {
 		if (target.CompareTag("GameController")) {
 			Debug.Log ("A");
+			PlayerPrefs.SetInt ("Guns", Shot.limit);
+			PlayerPrefs.Save ();
 			SceneManager.LoadScene("gameovera");
 
 		}

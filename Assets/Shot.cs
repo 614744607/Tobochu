@@ -4,12 +4,12 @@ using UnityEngine;
 
 
 public class Shot : MonoBehaviour {
-	public static int limit;
+	public static int limit = 0;
 	public Camera camera;
 	// Use this for initialization
+
 	void Start () {
 		Screen.lockCursor = true;
-		limit = 3;
 	}
 	
 	// Update is called once per frame

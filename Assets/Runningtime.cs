@@ -44,10 +44,10 @@ public class Runningtime : MonoBehaviour {
 			GameObject gameObject = GameObject.Find("Jama");
 			gameObject.SetActive(false);
 			a = a + 1;
-			Shot.limit = Shot.limit + 7;
+			Shot.limit = Shot.limit + 5;
 		}
 
-
+	
 
 		Score.score = Time.deltaTime + Score.score;
 		float Shokincheck = Score.score * Score.ShokinPerSec;
@@ -62,10 +62,12 @@ public class Runningtime : MonoBehaviour {
 
 		if (Score.score >= 300) {
 			Score.score = 300;
+
 			SceneManager.LoadScene ("tososeikou");
+			PlayerPrefs.SetInt ("Guns", Shot.limit);
+			PlayerPrefs.Save ();
 
 		}
-
 
 		if (Input.GetKeyDown (KeyCode.R) & Itemused == 0) { //Rが押された時
 			Score.score = Score.score + 10; //10秒だけ逃げ切る時間を減らせる
@@ -100,4 +102,3 @@ public class Runningtime : MonoBehaviour {
 
 
 }
-	

@@ -10,6 +10,7 @@ public class Score : MonoBehaviour {
 	//public Text ItemText;
 	public Text highScoreUIText;
 	public Text ShokinPerSecUIText;
+	public Text ItemNumberText;
 	// 時間
 	public static float score = 0;
 	// 合計時間
@@ -24,6 +25,7 @@ public class Score : MonoBehaviour {
 	void Start () { //保存されたデータを読み込む
 		float getScore = PlayerPrefs.GetFloat ("shokinKey");
 		float getTanka = PlayerPrefs.GetFloat ("PerSecKey");
+		Shot.limit = PlayerPrefs.GetInt("Guns");
 		if (getTanka < 50) {
 			getTanka = 100;
 		}
@@ -31,6 +33,9 @@ public class Score : MonoBehaviour {
 		ShokinPerSec = getTanka;
 		ShokinText.text = "賞金：" + Shokin.ToString() + "円";
 		ShokinPerSecUIText.text = "1秒：" + ShokinPerSec.ToString() + "円";
+		ItemNumberText.text = "銃の数:"+ Shot.limit.ToString() + "個";
+
+		Cursor.visible = true;
 
 	}
 	
@@ -49,12 +54,13 @@ public class Score : MonoBehaviour {
 				}
 			} else {
 				score = 300;
-				Shokin = Shokin + 500 * ShokinPerSec;
+				Shokin = Shokin + 300 * ShokinPerSec;
 				highScoreUIText.text = "逃走時間 : " + score.ToString () + "秒"; //表示して
 				ShokinPerSec = ShokinPerSec + 50;
 			}
 			ShokinText.text = "賞金：" + Shokin.ToString() + "円";
 			ShokinPerSecUIText.text = "1秒：" + ShokinPerSec.ToString() + "円";
+			ItemNumberText.text = "銃の数:"+ Shot.limit.ToString() + "個";
 			PlayerPrefs.SetFloat ("shokinKey", Shokin);
 			PlayerPrefs.SetFloat ("PerSecKey", ShokinPerSec);
 			PlayerPrefs.Save ();
@@ -79,6 +85,7 @@ public class Score : MonoBehaviour {
 			ShokinText.text = "賞金：" + Shokin.ToString() + "円";
 			ShokinPerSecUIText.text = "1秒：" + ShokinPerSec.ToString() + "円";
 		}		
+
 
 
 	}
